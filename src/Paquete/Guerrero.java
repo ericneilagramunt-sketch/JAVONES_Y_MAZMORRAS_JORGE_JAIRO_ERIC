@@ -17,4 +17,9 @@ public class Guerrero {
 	 
 	 this.CompañeroProtegido = null;
  }
+ 
+ public Personaje estaProtegiendo() {
+	 
+	 return this.CompañeroProtegido;
+ }
 }
