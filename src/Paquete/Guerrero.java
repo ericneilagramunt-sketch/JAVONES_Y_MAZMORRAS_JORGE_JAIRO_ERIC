@@ -12,4 +12,9 @@ public class Guerrero {
  public void proteger(Personaje compañero) {
 	 this.CompañeroProtegido = compañero;
  }
+ 
+ public void dejardeProteger() {
+	 
+	 this.CompañeroProtegido = null;
+ }
 }
