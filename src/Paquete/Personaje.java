@@ -18,6 +18,13 @@ public class Personaje {
     }
     public void Mostrar_Info() {
     	System.out.println("------------------------");
+        System.out.println("------------------------");
+    	System.out.println("Nombre: " + nombre);
+        System.out.println("Nivel: " + nivel);
+        System.out.println("Puntos de Vida: " + puntosVida);
+        System.out.println("Protegido: " + (protegido ? "Sí" : "No"));
+        System.out.println("======================"); 
+        
     }
     // Reduce los puntos de vida del personaje
     public void bajarVida(int cantidad) {
@@ -42,7 +49,30 @@ public class Personaje {
         puntosVida = puntosVida + cantidad;
         System.out.println(nombre + " se cura " + cantidad + " puntos. Vida actual: " + puntosVida);
     }
+     // Devuelve el inventario del personaje
+    public inventario getInventario() {
+        return inventario;
+    }
     
+    // Añade equipamiento al inventario
+    public void agregarEquipamiento(equipamento equipamiento) {
+        inventario.agregarEquipamiento(equipamiento);
+    }
+    
+    // Cambia el estado de protección
+    public void setProtegido(boolean protegido) {
+        this.protegido = protegido;
+    }
+    
+    // Devuelve si está protegido
+    public boolean estaProtegido() {
+        return protegido;
+    }
+    
+    // Método para obtener el nombre (útil para otras clases)
+    public String getNombre() {
+        return nombre;
+    }
 
 
 }
