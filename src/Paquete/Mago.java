@@ -1,7 +1,5 @@
 package Paquete;
 
-public class Mago {
-
 public class Mago extends Personaje{
 // Atributo adicional del Mago
     private int mana;
@@ -33,6 +31,13 @@ public class Mago extends Personaje{
     public int getMana() {
         return mana;
     }
-    
+    // Muestra la información del personaje
+    public void mostrarInfo() {
+        System.out.println("======================");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Nivel: " + nivel);
+        System.out.println("Puntos de Vida: " + puntosVida);
+        System.out.println("Protegido: " + (protegido ? "Sí" : "No"));
+        System.out.println("======================");
     
 }
