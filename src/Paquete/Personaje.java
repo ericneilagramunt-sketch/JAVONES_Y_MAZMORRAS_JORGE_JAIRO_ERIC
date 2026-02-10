@@ -19,4 +19,30 @@ public class Personaje {
     public void Mostrar_Info() {
     	System.out.println("------------------------");
     }
+    // Reduce los puntos de vida del personaje
+    public void bajarVida(int cantidad) {
+        // Si está protegido, el daño se reduce a la mitad
+        if (protegido) {
+            cantidad = cantidad / 2;
+            System.out.println(nombre + " está protegido! El daño se reduce a " + cantidad);
+        }
+        
+        puntosVida = puntosVida - cantidad;
+        
+        // Los puntos de vida no pueden ser negativos
+        if (puntosVida < 0) {
+            puntosVida = 0;
+        }
+        
+        System.out.println(nombre + " recibe " + cantidad + " de daño. Vida restante: " + puntosVida);
+    }
+    
+    // Aumenta los puntos de vida del personaje
+    public void curar(int cantidad) {
+        puntosVida = puntosVida + cantidad;
+        System.out.println(nombre + " se cura " + cantidad + " puntos. Vida actual: " + puntosVida);
+    }
+    
+
+
 }
