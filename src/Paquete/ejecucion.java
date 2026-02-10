@@ -20,5 +20,22 @@ public class ejecucion {
 	    
 	    System.out.println("¡Personajes creados!\n");
 	    
+	    // ===== MOSTRAR INFORMACIÓN =====
+	    System.out.println("--- Información de los personajes ---\n");
+	    mago.mostrarInfo();
+	    guerrero.mostrarInfo();
+	    ladron.mostrarInfo();
+	    
+	    // ===== AÑADIR EQUIPAMIENTO =====
+	    System.out.println("\n--- Añadiendo equipamiento ---\n");
+	    
+	    // Crear objetos de equipamiento
+	    equipamento baston = new equipamento("Bastón Mágico", "arma");
+	    equipamento tunica = new equipamento("Túnica Azul", "armadura");
+	    equipamento espada = new equipamento("Espada de Acero", "arma");
+	    equipamento daga = new equipamento("Daga Sigilosa", "arma");
+	    
+	    
+	    
 }
 }
