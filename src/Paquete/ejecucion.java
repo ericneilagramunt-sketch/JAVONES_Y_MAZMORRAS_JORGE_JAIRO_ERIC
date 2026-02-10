@@ -76,5 +76,41 @@ public class ejecucion {
 	    ladron.robar();           // Roba invisible
 	    System.out.println();
 	    
+	    // ===== COMBATE =====
+	    System.out.println("--- ¡Combate! ---\n");
+	    
+	    System.out.println("Un enemigo ataca al mago:");
+	    mago.bajarVida(40);  // El daño se reduce porque está protegido
+	    System.out.println();
+	    
+	    System.out.println("Un enemigo ataca al ladrón:");
+	    ladron.bajarVida(30);  // Recibe daño completo (no está protegido)
+	    System.out.println();
+	    
+	    
+	    // ===== CURACIÓN =====
+	    System.out.println("--- Curaciones ---\n");
+	    mago.curar(20);
+	    ladron.curar(15);
+	    System.out.println();
+	    
+	    
+	    // ===== CAMBIAR PROTECCIÓN =====
+	    System.out.println("--- Cambiando protección ---\n");
+	    guerrero.dejarDeProteger();  // Deja de proteger al mago
+	    guerrero.proteger(ladron);    // Ahora protege al ladrón
+	    System.out.println();
+	    
+	    
+	    // ===== ESTADO FINAL =====
+	    System.out.println("--- Estado final de los personajes ---\n");
+	    mago.mostrarInfo();
+	    guerrero.mostrarInfo();
+	    ladron.mostrarInfo();
+	    
+	    System.out.println("====================================");
+	    System.out.println("FIN DE LA AVENTURA");
+	    System.out.println("====================================");
+	    
 }
 }
