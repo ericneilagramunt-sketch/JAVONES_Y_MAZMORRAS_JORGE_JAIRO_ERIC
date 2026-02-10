@@ -35,7 +35,82 @@ public class ejecucion {
 	    equipamento espada = new equipamento("Espada de Acero", "arma");
 	    equipamento daga = new equipamento("Daga Sigilosa", "arma");
 	    
+	 // Añadir equipamiento a los personajes
+	    mago.agregarEquipamiento(baston);
+	    mago.agregarEquipamiento(tunica);
+	    guerrero.agregarEquipamiento(espada);
+	    ladron.agregarEquipamiento(daga);
 	    
+	    System.out.println();
+	    
+	    
+	    // ===== MOSTRAR INVENTARIOS =====
+	    System.out.println("--- Inventarios ---\n");
+	    System.out.println("Inventario de " + mago.getNombre() + ":");
+	    mago.getInventario().mostrarInventario();
+	    System.out.println();
+	    
+	    System.out.println("Inventario de " + guerrero.getNombre() + ":");
+	    guerrero.getInventario().mostrarInventario();
+	    System.out.println();
+	    
+	    
+	    // ===== HABILIDADES DEL MAGO =====
+	    System.out.println("--- Habilidades del Mago ---\n");
+	    mago.lanzarHechizo(20);  // Lanza un hechizo que cuesta 20 de maná
+	    mago.lanzarHechizo(40);  // Intenta lanzar otro hechizo
+	    mago.recargarMana(30);   // Recarga maná
+	    System.out.println();
+	    
+	    
+	    // ===== HABILIDADES DEL GUERRERO =====
+	    System.out.println("--- Habilidades del Guerrero ---\n");
+	    guerrero.proteger(mago);  // El guerrero protege al mago
+	    System.out.println();
+	    
+	    
+	    // ===== HABILIDADES DEL LADRÓN =====
+	    System.out.println("--- Habilidades del Ladrón ---\n");
+	    ladron.robar();           // Intenta robar visible
+	    ladron.hacerseInvisible(); // Se vuelve invisible
+	    ladron.robar();           // Roba invisible
+	    System.out.println();
+	    
+	    // ===== COMBATE =====
+	    System.out.println("--- ¡Combate! ---\n");
+	    
+	    System.out.println("Un enemigo ataca al mago:");
+	    mago.bajarVida(40);  // El daño se reduce porque está protegido
+	    System.out.println();
+	    
+	    System.out.println("Un enemigo ataca al ladrón:");
+	    ladron.bajarVida(30);  // Recibe daño completo (no está protegido)
+	    System.out.println();
+	    
+	    
+	    // ===== CURACIÓN =====
+	    System.out.println("--- Curaciones ---\n");
+	    mago.curar(20);
+	    ladron.curar(15);
+	    System.out.println();
+	    
+	    
+	    // ===== CAMBIAR PROTECCIÓN =====
+	    System.out.println("--- Cambiando protección ---\n");
+	    guerrero.dejarDeProteger();  // Deja de proteger al mago
+	    guerrero.proteger(ladron);    // Ahora protege al ladrón
+	    System.out.println();
+	    
+	    
+	    // ===== ESTADO FINAL =====
+	    System.out.println("--- Estado final de los personajes ---\n");
+	    mago.mostrarInfo();
+	    guerrero.mostrarInfo();
+	    ladron.mostrarInfo();
+	    
+	    System.out.println("====================================");
+	    System.out.println("FIN DE LA AVENTURA");
+	    System.out.println("====================================");
 	    
 }
 }
