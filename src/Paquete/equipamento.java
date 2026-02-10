@@ -10,4 +10,14 @@ public class equipamento {
         this.nombre = nombre;
         this.tipo = tipo;
     }
+     // Método para obtener el nombre
+        public String getNombre() {
+            return nombre;
+        }
+        
+        // Método para obtener el tipo
+        public String getTipo() {
+            return tipo;
+        }
+
 }
