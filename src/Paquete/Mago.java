@@ -31,13 +31,12 @@ public class Mago extends Personaje{
     public int getMana() {
         return mana;
     }
-    // Muestra la información del personaje
+  // Sobrescribe el método mostrarInfo para incluir el maná
+   
     public void mostrarInfo() {
+        super.mostrarInfo();  // Llama al método de la clase padre
+        System.out.println("Maná: " + mana);
         System.out.println("======================");
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Nivel: " + nivel);
-        System.out.println("Puntos de Vida: " + puntosVida);
-        System.out.println("Protegido: " + (protegido ? "Sí" : "No"));
-        System.out.println("======================");
+    }
     
 }
