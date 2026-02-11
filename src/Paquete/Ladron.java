@@ -8,6 +8,14 @@ public class Ladron extends Personaje {
     public Ladron(String nombre, int nivel, int puntosVida) {
         super(nombre, nivel, puntosVida);
         this.invisible = false;  // Al inicio no está invisible
+	}
+ // Método para robar
+    public void robar() {
+        if (invisible) {
+            System.out.println(nombre + " roba sin ser visto gracias a su invisibilidad!");
+        } else {
+            System.out.println(nombre + " intenta robar pero puede ser detectado!");
+        }
     }
     
 }
