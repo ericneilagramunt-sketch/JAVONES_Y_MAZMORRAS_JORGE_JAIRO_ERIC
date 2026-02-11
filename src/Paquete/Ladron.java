@@ -1,30 +1,13 @@
 package Paquete;
 
-public class Ladron {
-	
-	private boolean invisible;
-	
-	public void ladron() {
-	
-	this.invisible = false;
-
-
-}
-
-public void hacerseinvisible() {
-	
-	this.invisible = !this.invisible;
-	
-	if (this.invisible){
-		System.out.println("El ladron es invisible");
-	}
-	
-	else {
-		System.out.println("El ladron ya no es invisible");
-	}
-	}
-
-  public boolean estainvisible() {
-	return this.invisible;
-}
+public class Ladron extends Personaje {
+	 // Atributo adicional: si está invisible
+    private boolean invisible;
+    
+    // Constructor - Crea un nuevo Ladrón
+    public Ladron(String nombre, int nivel, int puntosVida) {
+        super(nombre, nivel, puntosVida);
+        this.invisible = false;  // Al inicio no está invisible
+    }
+    
 }
